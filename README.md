@@ -1,4 +1,4 @@
-# Dashboard plantilla base
+# Dashboard plantilla base web
 
 A new Flutter project.
 
