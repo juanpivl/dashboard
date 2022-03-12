@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_constructors
 import 'package:flutter/material.dart';
 import 'package:nutricion_app/providers/auth_provider.dart';
+import 'package:nutricion_app/providers/sidemenu_provider.dart';
 import 'package:nutricion_app/router/router.dart';
 import 'package:nutricion_app/services/local_storage.dart';
 import 'package:nutricion_app/services/navigation_service.dart';
@@ -22,6 +23,7 @@ class AppState extends StatelessWidget {
     return MultiProvider(
       providers: [
         ChangeNotifierProvider(lazy: false, create: (_) => AuthProvider()),
+        ChangeNotifierProvider(lazy: false, create: (_) => SideMenuProvider()),
       ],
       child: MyApp(),
     );

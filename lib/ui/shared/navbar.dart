@@ -18,7 +18,7 @@ class NavBar extends StatelessWidget {
           if (size.width <= 700)
             IconButton(
                 onPressed: () {
-                  sideMenuProvider.openMenu();
+                  SideMenuProvider.openMenu();
                 },
                 icon: Icon(Icons.menu_outlined)),
           SizedBox(width: 5),

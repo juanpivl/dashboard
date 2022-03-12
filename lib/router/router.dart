@@ -13,7 +13,9 @@ class Flutorouter {
   static String registerRoute = '/auth/register';
 
   //dashboard
-  static String dashboarRoute = '/dasboard';
+  static String dashboarRoute = '/dashboard';
+  static String iconsRoute = '/dashboard/icons';
+  static String blankRoute = '/dashboard/blank';
 
   static void configureRoutes() {
     //Auth Routes
@@ -28,6 +30,13 @@ class Flutorouter {
     router.define(dashboarRoute,
         handler: DashboardHandlers.dashboard,
         transitionType: TransitionType.fadeIn);
+    router.define(iconsRoute,
+        handler: DashboardHandlers.icons,
+        transitionType: TransitionType.fadeIn);
+    router.define(blankRoute,
+        handler: DashboardHandlers.blank,
+        transitionType: TransitionType.fadeIn);
+
     //404
     router.notFoundHandler = NoPageFoundHandlers.noPageFound;
   }

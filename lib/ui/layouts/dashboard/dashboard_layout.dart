@@ -19,7 +19,7 @@ class _DashboardLayoutState extends State<DashboardLayout>
   @override
   void initState() {
     super.initState();
-    sideMenuProvider.menuController = new AnimationController(
+    SideMenuProvider.menuController = new AnimationController(
         vsync: this, duration: Duration(milliseconds: 300));
   }
 
@@ -41,7 +41,12 @@ class _DashboardLayoutState extends State<DashboardLayout>
                     NavBar(),
 
                     //contenedor del view
-                    Expanded(child: widget.child)
+                    Expanded(
+                        child: Padding(
+                      child: widget.child,
+                      padding:
+                          EdgeInsets.symmetric(horizontal: 20, vertical: 20),
+                    ))
                   ],
                 ),
               )
@@ -49,14 +54,14 @@ class _DashboardLayoutState extends State<DashboardLayout>
           ),
           if (size.width < 700)
             AnimatedBuilder(
-                animation: sideMenuProvider.menuController,
+                animation: SideMenuProvider.menuController,
                 builder: (context, _) => Stack(
                       children: [
-                        if (sideMenuProvider.isOpen)
+                        if (SideMenuProvider.isOpen)
                           Opacity(
-                            opacity: sideMenuProvider.opacity.value,
+                            opacity: SideMenuProvider.opacity.value,
                             child: GestureDetector(
-                              onTap: () => sideMenuProvider.closeMenu(),
+                              onTap: () => SideMenuProvider.closeMenu(),
                               child: Container(
                                 width: size.width,
                                 height: size.height,
@@ -65,7 +70,7 @@ class _DashboardLayoutState extends State<DashboardLayout>
                             ),
                           ),
                         Transform.translate(
-                          offset: Offset(sideMenuProvider.movement.value, 0),
+                          offset: Offset(SideMenuProvider.movement.value, 0),
                           child: Sidebar(),
                         ),
                       ],
