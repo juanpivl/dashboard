@@ -1,16 +1,8 @@
-# nutricion_app
+# Dashboard plantilla base
 
 A new Flutter project.
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+![Captura](https://user-images.githubusercontent.com/62524570/158027716-c955e263-ac6b-4e06-a7dc-9b30dc1fa933.PNG)
+![Captura](https://user-images.githubusercontent.com/62524570/158027770-3d79ef97-c772-4474-8031-97efb002731f.PNG)
